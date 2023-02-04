@@ -15,22 +15,29 @@
  * @param {ListNode} list2
  * @return {ListNode}
  */
-var mergeTwoLists = function (head1, head2) {
+var mergeTwoLists = function (a, b) {
+  if (!a ?? !b) return a ? a : b
   // Make left less than or equal to right
-  if (head1.val <= head2.val) { let left = head1, right = head2; }
-  else { let left = head2, right = head1; }
+  let left = null, right = null;
+  if (a.val <= b.val) { left = a, right = b; }
+  else { left = b, right = a; }
+
+  // Store head for end
+  let head = left;
+
   // Go until we run out
-  while ((typeof left !== "undefined") || (typeof right !== "undefined")) {
-    if (left.next.val <= right.val) {
+  while (left && right) {
+    if (left?.next?.val <= right?.val) {
       // Move forward
-      if (left.next) left = left.next
-      else { return left }
+      left = left.next
     } else {
       // Unshift right node into left list
-      let tmp = left.next;
-      left.next = new ListNode(right.val, null);
+      left.next = new ListNode(right.val, left.next);
       right = right.next;
     }
   }
-  return left;
+  if (right) left.next = right;
+
+  // Return new head node of merged lists,
+  return head;
 };
