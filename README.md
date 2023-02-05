@@ -1,4 +1,5 @@
 # algorithms-and-data-structures
+
 Studying data structures &amp; algorithms
 
 [1480. Running Sum of 1d Array](1480runningSumOf1dArray.js)

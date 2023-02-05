@@ -10,11 +10,12 @@
  * @return {number}
  */
 var pivotIndex = (nums) => {
-  let prefixSum = [], postfixSum = [];
+  let prefixSum = [],
+    postfixSum = [];
   for (let i = 0; i < nums.length; i++) {
     let j = nums.length - 1 - i;
-    postfixSum[j] = (postfixSum[j + 1] || 0) + nums[j]
-    prefixSum[i] = (prefixSum[i - 1] || 0) + nums[i]
+    postfixSum[j] = (postfixSum[j + 1] || 0) + nums[j];
+    prefixSum[i] = (prefixSum[i - 1] || 0) + nums[i];
   }
   for (let i = 0; i < nums.length; i++) {
     let j = nums.length - 1 - i;

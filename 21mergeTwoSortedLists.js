@@ -16,11 +16,15 @@
  * @return {ListNode}
  */
 var mergeTwoLists = function (a, b) {
-  if (!a ?? !b) return a ? a : b
+  if (!a ?? !b) return a ? a : b;
   // Make left less than or equal to right
-  let left = null, right = null;
-  if (a.val <= b.val) { left = a, right = b; }
-  else { left = b, right = a; }
+  let left = null,
+    right = null;
+  if (a.val <= b.val) {
+    (left = a), (right = b);
+  } else {
+    (left = b), (right = a);
+  }
 
   // Store head for end
   let head = left;
@@ -29,7 +33,7 @@ var mergeTwoLists = function (a, b) {
   while (left && right) {
     if (left?.next?.val <= right?.val) {
       // Move forward
-      left = left.next
+      left = left.next;
     } else {
       // Unshift right node into left list
       left.next = new ListNode(right.val, left.next);
