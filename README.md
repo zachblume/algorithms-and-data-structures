@@ -11,3 +11,9 @@ Studying data structures &amp; algorithms
 [392. Is Subsequence](392isSubsequence.js)
 
 [21. Merge Two Sorted Lists](21mergeTwoSortedLists.js)
+
+[206 Reverse Linked List](206.reverseLinkedList.js)
+
+[22 Generate Balanced Parentheses](22generateParentheses.js)
+
+[13 Roman Numerals To Integer](13romanToInteger.js)
