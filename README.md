@@ -17,3 +17,5 @@ Studying data structures &amp; algorithms
 [22 Generate Balanced Parentheses](22generateParentheses.js)
 
 [13 Roman Numerals To Integer](13romanToInteger.js)
+
+[88 Merge Sorted Array](88mergeSortedArray.ts)
